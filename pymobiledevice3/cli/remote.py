@@ -176,7 +176,7 @@ async def start_tunnel_task(
                       protocol=protocol)
 
 
-@remote_cli.command('start-tunnel', cls=BaseCommand)
+@remote_cli.command('start-quic-tunnel', cls=BaseCommand)
 @click.option('-t', '--connection-type', type=click.Choice([e.value for e in ConnectionType], case_sensitive=False),
               default=ConnectionType.USB.value)
 @click.option('--udid', help='UDID for a specific device to look for')
